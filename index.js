@@ -1,3 +1,11 @@
+function tile(url, left, bottom, width, height){
+    for(let h = 0; h < height; h++){
+        for(let w = 0; w < width; w++){
+            newImage(url, left + w*100, bottom+h*100)
+        }
+    }
+}
+
 function newImage(url, left, bottom){
     let object = document.createElement('img')
     object.src = url
@@ -15,6 +23,7 @@ function newItem(url, left, bottom){
         object.remove()
     })
 }
+
 newImage('assets/green-character.gif', 100, 100);
 newImage('assets/tree.png', 200, 300);
 newImage('assets/pillar.png', 350, 100);
@@ -24,7 +33,7 @@ newImage('assets/well.png', 500, 425);
 
 let sword = document.createElement('img')
 sword.src = 'assets/sword.png'
-sword.position = 'fixed'
+//sword.position = 'fixed'
 sword.left = '500px'
 sword.bottom = '405px'
 document.body.append(sword)
