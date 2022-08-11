@@ -24,6 +24,13 @@ function newItem(url, left, bottom){
     })
 }
 
+let horizon = window.innerHeight / 1.75
+let heightOfSky = window.innerHeight-horizon
+let heightOfGrass = horizon
+
+tile('assets/sky.png', 0, horizon, window.innerWidth/100, heightOfSky/100)
+tile('assets/grass.png', 0, 0, window.innerWidth/100, heightOfGrass/100)
+
 newImage('assets/green-character.gif', 100, 100);
 newImage('assets/tree.png', 200, 300);
 newImage('assets/pillar.png', 350, 100);
@@ -32,8 +39,8 @@ newImage('assets/crate.png', 150, 200);
 newImage('assets/well.png', 500, 425);
 
 let sword = document.createElement('img')
-sword.src = 'assets/sword.png'
-//sword.position = 'fixed'
+//sword.src = 'assets/sword.png'
+sword.position = 'fixed'
 sword.left = '500px'
 sword.bottom = '405px'
 document.body.append(sword)
